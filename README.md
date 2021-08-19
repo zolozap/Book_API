@@ -15,12 +15,16 @@ https://www.docker.com/get-started
 docker-compose up -d
 ```
 
-```Logs book_app
-docker-compose logs -f book_app
-```
+## Execute to MongoCLI
 
 ```MongoDB
 docker exec -it {{container_id}} /bin/bash >> mongo
+```
+
+## Logs
+
+```Logs book_app
+docker-compose logs -f book_app
 ```
 
 ## Contributing
