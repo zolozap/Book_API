@@ -1,0 +1,135 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "version": "1.0.0", 
+      "title": "Books Project CRUD",
+      "description": "Books Project API",
+      "license": {
+        "name": "MIT",
+        "url": "https://opensource.org/licenses/MIT"
+      }
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "schemes": ["http"],
+    "paths": {
+        "/book": {
+          "get": {
+            "tags": ["Get all books"],
+            "produces": [
+              "application/json"
+            ],
+            "responses": {
+              "200": {
+                "description": "200 response",
+                "headers": {
+                  "Access-Control-Allow-Origin": {
+                    "type": "string"
+                  }
+                }
+              },
+              "404": {
+                "description": "Book is not found"
+              }
+            }
+          }
+        },
+        "/book/upload": {
+          "post": {
+            "tags": ["Create book"],
+            "produces": [
+              "application/json"
+            ],
+            "responses": {
+              "200": {
+                "description": "200 response",
+                "headers": {
+                  "Access-Control-Allow-Origin": {
+                    "type": "string"
+                  }
+                }
+              },
+              "404": {
+                "description": "Book is not found"
+              }
+            }
+          }
+        },
+        "/book/image": {
+          "get": {
+            "tags": ["Get image file base64"],
+            "produces": [
+              "application/json"
+            ],
+            "responses": {
+              "200": {
+                "description": "200 response",
+                "headers": {
+                  "Access-Control-Allow-Origin": {
+                    "type": "string"
+                  }
+                }
+              },
+              "404": {
+                "description": "Book is not found"
+              }
+            }
+          }
+        },
+        "/book/{bookId}": {
+          "get": {
+            "tags": ["Get book by book._id"],
+            "produces": [
+              "application/json"
+            ],
+            "responses": {
+              "200": {
+                "description": "200 response",
+                "headers": {
+                  "Access-Control-Allow-Origin": {
+                    "type": "string"
+                  }
+                }
+              },
+              "404": {
+                "description": "Book is not found"
+              }
+            }
+          },
+          "patch": {
+            "tags": ["Update book data by book._id"],
+            "produces": [
+              "application/json"
+            ],
+            "responses": {
+              "200": {
+                "description": "200 response",
+                "headers": {
+                  "Access-Control-Allow-Origin": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "delete": {
+            "tags": ["Delete book data by book._id"],
+            "produces": [
+              "application/json"
+            ],
+            "responses": {
+              "200": {
+                "description": "200 response",
+                "headers": {
+                  "Access-Control-Allow-Origin": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+    },
+    "consumes": ["application/json"],
+    "produces": ["application/json"]
+  }

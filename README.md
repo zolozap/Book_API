@@ -27,6 +27,11 @@ docker exec -it {{container_id}} /bin/bash >> mongo
 docker-compose logs -f book_app
 ```
 
+## Swagger documents
+```Logs book_app
+http://localhost:3000/api-docs/
+```
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
